@@ -23,12 +23,12 @@ public class Loginsteps
 	    
 	}
 
-	@When("user enters username and password")
-	public void user_enters_username_and_password() 
+	@When("^user enters (.*) and (.*)$")
+	public void user_enters_username_and_password(String uname, String pwd) 
 	{
 		System.out.println("Step1: User enters credentials");
-		driver.findElement(By.name("username")).sendKeys("admin");
-		driver.findElement(By.name("password")).sendKeys("admin123");
+		driver.findElement(By.name("username")).sendKeys(uname);
+		driver.findElement(By.name("password")).sendKeys(pwd);
 		
 	    
 	}
