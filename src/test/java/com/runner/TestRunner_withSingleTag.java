@@ -8,8 +8,8 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src\\test\\resources\\Features\\Tags.feature",glue = {"com.runner"},
-plugin = {"pretty","junit:target/cucumber.xml"},tags = "@smoke")
+@CucumberOptions(features = "src/test/resources/Features/productsaddedTocart.feature",glue = {"com.stepdefinition"},
+plugin = {"pretty","junit:target/cucumber.xml","html:target/htmlreport.html"})
 
 public class TestRunner_withSingleTag 
 {
